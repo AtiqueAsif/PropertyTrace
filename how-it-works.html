@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works | PropertyTrace</title>
+  <meta name="description" content="See the PropertyTrace workflow from document upload to report generation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'] },
+          colors: {
+            primary: '#07202E', secondary: '#056374', accent: '#008B7B', gold: '#D59D3A',
+            lightGold: '#F3EAA8', danger: '#853535', darkGray: '#474746', soft: '#FBF8EA'
+          },
+          boxShadow: { soft: '0 18px 45px rgba(7,32,46,.10)', glow: '0 0 35px rgba(0,139,123,.28)' }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="font-inter antialiased overflow-x-hidden" data-page="how">
+
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 border-b border-white/30 glass">
+    <nav class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <a href="index.html" class="flex items-center" aria-label="PropertyTrace Home">
+          <img src="images/propertytrace-logo-navbar.png" alt="PropertyTrace logo" class="brand-logo-nav" />
+        </a>
+        <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-primary/80"><a class="nav-link  hover:text-accent transition" data-nav-key="home" href="index.html">Home</a><a class="nav-link  hover:text-accent transition" data-nav-key="features" href="features.html">Features</a><a class="nav-link active hover:text-accent transition" data-nav-key="how" href="how-it-works.html">How It Works</a><a class="nav-link  hover:text-accent transition" data-nav-key="risk" href="risk-analysis.html">Risk Analysis</a><a class="nav-link  hover:text-accent transition" data-nav-key="reports" href="reports.html">Reports</a><a class="nav-link  hover:text-accent transition" data-nav-key="about" href="about.html">About</a><a class="nav-link  hover:text-accent transition" data-nav-key="contact" href="contact.html">Contact</a></div>
+        <div class="hidden lg:flex items-center gap-3">
+          <button data-open-modal="loginModal" class="rounded-full border border-primary/15 bg-white/90 px-5 py-2.5 text-sm font-bold text-primary hover:border-accent hover:text-accent transition">Login</button>
+          <button data-open-modal="signupModal" class="rounded-full bg-accent px-5 py-2.5 text-sm font-bold text-white shadow-glow hover:bg-secondary transition">Get Started</button>
+        </div>
+        <button id="menuBtn" class="lg:hidden grid h-11 w-11 place-items-center rounded-xl border border-primary/10 bg-white text-primary" aria-label="Open menu">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden lg:hidden pb-5">
+        <div class="rounded-3xl border border-primary/10 bg-white p-4 shadow-soft">
+          <div class="grid gap-3 text-sm font-bold text-primary/85"><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="home" href="index.html">Home</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="features" href="features.html">Features</a><a class="mobile-link active rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="how" href="how-it-works.html">How It Works</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="risk" href="risk-analysis.html">Risk Analysis</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="reports" href="reports.html">Reports</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="about" href="about.html">About</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="contact" href="contact.html">Contact</a>
+            <button data-open-modal="loginModal" class="rounded-xl border border-primary/10 bg-white px-4 py-3 text-left">Login</button>
+            <button data-open-modal="signupModal" class="rounded-xl bg-accent px-4 py-3 text-center text-white">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<main class="pt-20">
+    <section class="bg-soft py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center reveal">
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-[.22em] text-accent">Process</p>
+          <h1 class="section-title text-3xl font-extrabold text-primary sm:text-5xl">Verification Journey</h1>
+          <p class="mt-5 text-sm leading-7 text-darkGray">The page below explains the platform flow in a clean, professional sequence so users understand exactly what happens after documents are uploaded.</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <div class="relative grid gap-5">
+            <div class="timeline-line hidden md:block"></div>
+            <button class="workflow-step active reveal" data-workflow-step="upload"><span>01</span><div><b>Upload Property Documents</b><small>Users add deed, khatian, mutation papers, tax receipts and other supporting records.</small></div></button>
+            <button class="workflow-step reveal" data-workflow-step="extract"><span>02</span><div><b>Extract Key Information</b><small>The system reads owner names, plot data, registration numbers, dates and land quantity.</small></div></button>
+            <button class="workflow-step reveal" data-workflow-step="compare"><span>03</span><div><b>Compare and Validate</b><small>Document fields are compared to detect mismatch, duplicate names, missing records and unclear links.</small></div></button>
+            <button class="workflow-step reveal" data-workflow-step="risk"><span>04</span><div><b>Generate Risk Insight</b><small>Risk indicators are grouped into low, medium or high concern levels with simple explanations.</small></div></button>
+            <button class="workflow-step reveal" data-workflow-step="report"><span>05</span><div><b>Export Structured Report</b><small>Users receive a clean report summary for ownership, compliance and purchase decision support.</small></div></button>
+          </div>
+
+          <div class="reveal lg:sticky lg:top-28">
+            <div class="workflow-preview-card">
+              <div class="relative overflow-hidden rounded-[1.8rem] border border-primary/10 bg-primary shadow-soft">
+                <img src="images/workflow.png" alt="PropertyTrace workflow" class="h-64 w-full object-cover opacity-90">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent"></div>
+                <div class="absolute bottom-5 left-5 right-5 text-white">
+                  <p class="text-xs font-extrabold uppercase tracking-[.22em] text-gold">Current stage</p>
+                  <h2 id="workflowTitle" class="section-title mt-2 text-3xl font-extrabold">Upload Property Documents</h2>
+                </div>
+              </div>
+              <div class="grid gap-5 p-6 lg:p-7">
+                <p id="workflowText" class="text-sm leading-7 text-darkGray">The user starts by uploading scanned or digital property documents. Each file is organized by document type before analysis begins.</p>
+                <div class="rounded-2xl bg-soft p-5">
+                  <p class="mb-3 text-sm font-extrabold text-primary">User sees</p>
+                  <div id="workflowBullets" class="grid gap-2 text-xs leading-5 text-darkGray"></div>
+                </div>
+                <div class="grid gap-4 sm:grid-cols-3">
+                  <div class="rounded-2xl border border-primary/10 bg-white p-4"><b class="text-accent">01</b><p class="mt-1 text-xs text-darkGray">Clear instruction</p></div>
+                  <div class="rounded-2xl border border-primary/10 bg-white p-4"><b class="text-gold">02</b><p class="mt-1 text-xs text-darkGray">Module status</p></div>
+                  <div class="rounded-2xl border border-primary/10 bg-white p-4"><b class="text-primary">03</b><p class="mt-1 text-xs text-darkGray">Final report</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-3">
+          <div class="reveal premium-card p-7"><i data-lucide="user-check" class="h-7 w-7 text-accent"></i><h3 class="mt-4 text-xl font-extrabold">Simple for Users</h3><p class="mt-2 text-sm leading-6 text-darkGray">The interface uses guided cards, upload instructions, status labels and report summaries so users are not confused.</p></div>
+          <div class="reveal premium-card p-7"><i data-lucide="shield-check" class="h-7 w-7 text-gold"></i><h3 class="mt-4 text-xl font-extrabold">Structured for Review</h3><p class="mt-2 text-sm leading-6 text-darkGray">Every check is grouped under ownership, document consistency, compliance and risk to keep the process organized.</p></div>
+          <div class="reveal premium-card p-7"><i data-lucide="file-text" class="h-7 w-7 text-accent"></i><h3 class="mt-4 text-xl font-extrabold">Ready for Reporting</h3><p class="mt-2 text-sm leading-6 text-darkGray">The final output is prepared as a clear report section, not a random list of technical messages.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="professional-footer bg-[#041722] py-16 text-white">
+    <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <h2 class="footer-brand"><span class="footer-brand-property">Property</span><span class="footer-brand-trace">Trace</span></h2>
+          <p class="mt-4 max-w-xs text-sm leading-7 text-white/60">Intelligent property verification support for ownership review, document consistency, risk analysis and structured reports.</p>
+          <div class="mt-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold text-lightGold"><i data-lucide="shield-check" class="h-4 w-4"></i> Decision-support platform</div>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-gold">Platform</h3>
+          <div class="mt-4 grid gap-3 text-sm text-white/65">
+            <a href="features.html" class="hover:text-white">Features</a>
+            <a href="how-it-works.html" class="hover:text-white">How It Works</a>
+            <a href="risk-analysis.html" class="hover:text-white">Risk Analysis</a>
+            <a href="reports.html" class="hover:text-white">Reports</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-gold">Company & Help</h3>
+          <div class="mt-4 grid gap-3 text-sm text-white/65">
+            <a href="about.html" class="hover:text-white">About PropertyTrace</a>
+            <a href="contact.html#faq" class="hover:text-white">FAQ</a>
+            <a href="contact.html" class="hover:text-white">Contact</a>
+            <a href="privacy-disclaimer.html" class="hover:text-white">Privacy & Disclaimer</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-gold">Important Note</h3>
+          <div class="mt-4 grid gap-3 text-sm leading-6 text-white/65">
+            <p>PropertyTrace provides document-based verification support and risk indicators. It does not replace official registry records or professional legal advice.</p>
+            <span>support@propertytrace.com</span>
+            <span>Bangladesh</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/45">© 2026 PropertyTrace. All rights reserved by ADi.</div>
+    </div>
+  </footer>
+  <button id="backToTop" class="fixed bottom-6 right-6 hidden h-12 w-12 place-items-center rounded-full bg-accent text-white shadow-glow hover:bg-secondary transition" aria-label="Back to top"><i data-lucide="arrow-up" class="h-5 w-5"></i></button>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

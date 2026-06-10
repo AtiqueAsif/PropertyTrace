@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy &amp; Disclaimer | PropertyTrace</title>
+  <meta name="description" content="Privacy, security and legal disclaimer for PropertyTrace document review support." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'] },
+          colors: {
+            primary: '#07202E', secondary: '#056374', accent: '#008B7B', gold: '#D59D3A',
+            lightGold: '#F3EAA8', danger: '#853535', darkGray: '#474746', soft: '#FBF8EA'
+          },
+          boxShadow: { soft: '0 18px 45px rgba(7,32,46,.10)', glow: '0 0 35px rgba(0,139,123,.28)' }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="font-inter antialiased overflow-x-hidden" data-page="privacy">
+
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 border-b border-white/30 glass">
+    <nav class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <a href="index.html" class="flex items-center" aria-label="PropertyTrace Home">
+          <img src="images/propertytrace-logo-navbar.png" alt="PropertyTrace logo" class="brand-logo-nav" />
+        </a>
+        <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-primary/80"><a class="nav-link  hover:text-accent transition" data-nav-key="home" href="index.html">Home</a><a class="nav-link  hover:text-accent transition" data-nav-key="features" href="features.html">Features</a><a class="nav-link  hover:text-accent transition" data-nav-key="how" href="how-it-works.html">How It Works</a><a class="nav-link  hover:text-accent transition" data-nav-key="risk" href="risk-analysis.html">Risk Analysis</a><a class="nav-link  hover:text-accent transition" data-nav-key="reports" href="reports.html">Reports</a><a class="nav-link  hover:text-accent transition" data-nav-key="about" href="about.html">About</a><a class="nav-link  hover:text-accent transition" data-nav-key="contact" href="contact.html">Contact</a></div>
+        <div class="hidden lg:flex items-center gap-3">
+          <button data-open-modal="loginModal" class="rounded-full border border-primary/15 bg-white/90 px-5 py-2.5 text-sm font-bold text-primary hover:border-accent hover:text-accent transition">Login</button>
+          <button data-open-modal="signupModal" class="rounded-full bg-accent px-5 py-2.5 text-sm font-bold text-white shadow-glow hover:bg-secondary transition">Get Started</button>
+        </div>
+        <button id="menuBtn" class="lg:hidden grid h-11 w-11 place-items-center rounded-xl border border-primary/10 bg-white text-primary" aria-label="Open menu">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden lg:hidden pb-5">
+        <div class="rounded-3xl border border-primary/10 bg-white p-4 shadow-soft">
+          <div class="grid gap-3 text-sm font-bold text-primary/85"><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="home" href="index.html">Home</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="features" href="features.html">Features</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="how" href="how-it-works.html">How It Works</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="risk" href="risk-analysis.html">Risk Analysis</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="reports" href="reports.html">Reports</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="about" href="about.html">About</a><a class="mobile-link  rounded-xl px-4 py-3 hover:bg-soft" data-nav-key="contact" href="contact.html">Contact</a>
+            <button data-open-modal="loginModal" class="rounded-xl border border-primary/10 bg-white px-4 py-3 text-left">Login</button>
+            <button data-open-modal="signupModal" class="rounded-xl bg-accent px-4 py-3 text-center text-white">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<main class="pt-20">
+    <section class="bg-soft py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center reveal">
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-[.22em] text-accent">Privacy & Disclaimer</p>
+          <h1 class="section-title text-3xl font-extrabold text-primary sm:text-5xl">Privacy, Security & Legal Disclaimer</h1>
+          <p class="mt-5 text-sm leading-7 text-darkGray">This page explains how a production version should handle sensitive document information and how users should understand PropertyTrace outputs.</p>
+        </div>
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+          <div class="reveal premium-card p-7"><i data-lucide="lock-keyhole" class="h-7 w-7 text-accent"></i><h2 class="mt-4 text-xl font-extrabold">Document privacy</h2><p class="mt-3 text-sm leading-7 text-darkGray">Property records may include names, addresses, ownership history and transaction details. A production system should use secure upload, controlled access and clear data retention rules.</p></div>
+          <div class="reveal premium-card p-7"><i data-lucide="database-zap" class="h-7 w-7 text-gold"></i><h2 class="mt-4 text-xl font-extrabold">Demo data handling</h2><p class="mt-3 text-sm leading-7 text-darkGray">This website is a front-end demo. Form submissions, sample uploads and report previews are not connected to a secure backend unless a production system is added.</p></div>
+          <div class="reveal premium-card p-7"><i data-lucide="scale" class="h-7 w-7 text-danger"></i><h2 class="mt-4 text-xl font-extrabold">Legal disclaimer</h2><p class="mt-3 text-sm leading-7 text-darkGray">PropertyTrace provides document-based verification support and risk indicators. It does not replace official registry records, government verification or professional legal advice.</p></div>
+        </div>
+        <div class="mt-8 rounded-[2rem] border border-gold/25 bg-white p-7 shadow-soft lg:p-9 reveal">
+          <h2 class="section-title text-2xl font-extrabold text-primary">Recommended production security principles</h2>
+          <div class="mt-6 grid gap-4 md:grid-cols-2">
+            <div class="flex gap-3 text-sm leading-6 text-darkGray"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-accent"></i><span>Use HTTPS, authenticated user accounts and permission-based access.</span></div>
+            <div class="flex gap-3 text-sm leading-6 text-darkGray"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-accent"></i><span>Avoid storing unnecessary copies of sensitive documents.</span></div>
+            <div class="flex gap-3 text-sm leading-6 text-darkGray"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-accent"></i><span>Provide clear consent and deletion options for uploaded files.</span></div>
+            <div class="flex gap-3 text-sm leading-6 text-darkGray"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-accent"></i><span>Keep reports clearly marked as decision support, not legal certification.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="professional-footer bg-[#041722] py-16 text-white">
+    <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <h2 class="footer-brand"><span class="footer-brand-property">Property</span><span class="footer-brand-trace">Trace</span></h2>
+          <p class="mt-4 max-w-xs text-sm leading-7 text-white/60">Intelligent property verification support for ownership review, document consistency, risk analysis and structured reports.</p>
+          <div class="mt-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold text-lightGold"><i data-lucide="shield-check" class="h-4 w-4"></i> Decision-support platform</div>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-gold">Platform</h3>
+          <div class="mt-4 grid gap-3 text-sm text-white/65">
+            <a href="features.html" class="hover:text-white">Features</a>
+            <a href="how-it-works.html" class="hover:text-white">How It Works</a>
+            <a href="risk-analysis.html" class="hover:text-white">Risk Analysis</a>
+            <a href="reports.html" class="hover:text-white">Reports</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-gold">Company & Help</h3>
+          <div class="mt-4 grid gap-3 text-sm text-white/65">
+            <a href="about.html" class="hover:text-white">About PropertyTrace</a>
+            <a href="contact.html#faq" class="hover:text-white">FAQ</a>
+            <a href="contact.html" class="hover:text-white">Contact</a>
+            <a href="privacy-disclaimer.html" class="hover:text-white">Privacy & Disclaimer</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-gold">Important Note</h3>
+          <div class="mt-4 grid gap-3 text-sm leading-6 text-white/65">
+            <p>PropertyTrace provides document-based verification support and risk indicators. It does not replace official registry records or professional legal advice.</p>
+            <span>support@propertytrace.com</span>
+            <span>Bangladesh</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/45">© 2026 PropertyTrace. All rights reserved by ADi.</div>
+    </div>
+  </footer>
+  <button id="backToTop" class="fixed bottom-6 right-6 hidden h-12 w-12 place-items-center rounded-full bg-accent text-white shadow-glow hover:bg-secondary transition" aria-label="Back to top"><i data-lucide="arrow-up" class="h-5 w-5"></i></button>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
